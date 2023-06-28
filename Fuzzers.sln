@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSerializer.Fuzz", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UriFuzzer", "src\UriFuzzer\UriFuzzer.csproj", "{2D40A254-EEF1-485F-AD6A-CEADE1277F28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X509Certificate2Fuzzer", "src\X509Certificate2Fuzzer\X509Certificate2Fuzzer.csproj", "{3A7B8E73-81C8-4828-AD7D-0FEA3EC9DF7D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,14 +26,9 @@ Global
 		{2D40A254-EEF1-485F-AD6A-CEADE1277F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D40A254-EEF1-485F-AD6A-CEADE1277F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D40A254-EEF1-485F-AD6A-CEADE1277F28}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A7B8E73-81C8-4828-AD7D-0FEA3EC9DF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A7B8E73-81C8-4828-AD7D-0FEA3EC9DF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A7B8E73-81C8-4828-AD7D-0FEA3EC9DF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A7B8E73-81C8-4828-AD7D-0FEA3EC9DF7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{475FB2E6-4968-4266-9C6F-4142E70295BE} = {B81D79CA-74DC-46D6-B217-A6C79CABE95B}
 		{2D40A254-EEF1-485F-AD6A-CEADE1277F28} = {B81D79CA-74DC-46D6-B217-A6C79CABE95B}
-		{3A7B8E73-81C8-4828-AD7D-0FEA3EC9DF7D} = {B81D79CA-74DC-46D6-B217-A6C79CABE95B}
 	EndGlobalSection
 EndGlobal

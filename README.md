@@ -10,6 +10,5 @@
 
 SharpFuzz fuzzing projects for the following .NET Core classes:
 
-- [System.Security.Cryptography.X509Certificates.X509Certificate2](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificate2)
 - [System.Text.Json.JsonSerializer](https://learn.microsoft.com/en-us/dotnet/api/system.text.json.jsonserializer)
 - [System.Uri](https://learn.microsoft.com/en-us/dotnet/api/system.uri)
