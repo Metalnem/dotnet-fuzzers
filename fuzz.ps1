@@ -4,7 +4,7 @@ param (
     [Parameter(Mandatory = $true)]
     [string]$corpus,
     [Parameter(Mandatory = $true)]
-    [string]$targetDll,
+    [string[]]$targetDlls,
     [string]$dict = $null,
     [int]$timeout = 10
 )
@@ -27,16 +27,18 @@ dotnet publish $project -c release -o $outputDir --self-contained
 
 $projectName = (Get-Item $project).BaseName
 $project = Join-Path $outputDir $projectName
-$fuzzingTarget = Join-Path $outputDir $targetDll
-
-Write-Output "Instrumenting $fuzzingTarget"
 
 $env:SHARPFUZZ_INSTRUMENT_MIXED_MODE_ASSEMBLIES = 1
-sharpfuzz $fuzzingTarget
 
-if ($LastExitCode -ne 0) {
-    Write-Error "An error occurred while instrumenting $fuzzingTarget"
-    exit 1
+foreach ($targetDll in $targetDlls) {
+    $fuzzingTarget = Join-Path $outputDir $targetDll
+    Write-Output "Instrumenting $fuzzingTarget"
+    sharpfuzz $fuzzingTarget
+
+    if ($LastExitCode -ne 0) {
+        Write-Error "An error occurred while instrumenting $fuzzingTarget"
+        exit 1
+    }
 }
 
 Write-Output "$dict"
