@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSerializer.Fuzz", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UriFuzzer", "src\UriFuzzer\UriFuzzer.csproj", "{2D40A254-EEF1-485F-AD6A-CEADE1277F28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPAddressFuzzer", "src\IPAddressFuzzer\IPAddressFuzzer.csproj", "{DC645783-4699-428A-8B2C-7F656E70252E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +28,14 @@ Global
 		{2D40A254-EEF1-485F-AD6A-CEADE1277F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D40A254-EEF1-485F-AD6A-CEADE1277F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D40A254-EEF1-485F-AD6A-CEADE1277F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC645783-4699-428A-8B2C-7F656E70252E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC645783-4699-428A-8B2C-7F656E70252E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC645783-4699-428A-8B2C-7F656E70252E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC645783-4699-428A-8B2C-7F656E70252E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{475FB2E6-4968-4266-9C6F-4142E70295BE} = {B81D79CA-74DC-46D6-B217-A6C79CABE95B}
 		{2D40A254-EEF1-485F-AD6A-CEADE1277F28} = {B81D79CA-74DC-46D6-B217-A6C79CABE95B}
+		{DC645783-4699-428A-8B2C-7F656E70252E} = {B81D79CA-74DC-46D6-B217-A6C79CABE95B}
 	EndGlobalSection
 EndGlobal
