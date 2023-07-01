@@ -9,7 +9,7 @@ public class Item
 {
     public byte A { get; set; }
     public int B { get; set; }
-    public double C { get; set; } 
+    public double C { get; set; }
     public DateTime D { get; set; }
     public string E { get; set; }
     public short[] F { get; set; }
@@ -21,13 +21,9 @@ public class Program
 {
     public static void Main()
     {
-        Fuzzer.LibFuzzer.Run(span =>
+        Fuzzer.LibFuzzer.RunAndIgnoreExceptions(span =>
         {
-            try
-            {
-                JsonSerializer.Deserialize<Item>(span);
-            }
-            catch { }
+            JsonSerializer.Deserialize<Item>(span);
         });
     }
 }

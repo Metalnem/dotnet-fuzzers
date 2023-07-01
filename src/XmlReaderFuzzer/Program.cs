@@ -8,31 +8,27 @@ public class Program
 {
     public static void Main()
     {
-        Fuzzer.LibFuzzer.Run(span =>
+        Fuzzer.LibFuzzer.RunAndIgnoreExceptions(span =>
         {
-            try
-            {
-                using var stream = new MemoryStream(span.ToArray());
-                using var xml = XmlReader.Create(stream);
+            using var stream = new MemoryStream(span.ToArray());
+            using var xml = XmlReader.Create(stream);
 
-                while (xml.Read())
+            while (xml.Read())
+            {
+                if (xml.NodeType == XmlNodeType.Text)
                 {
-                    if (xml.NodeType == XmlNodeType.Text)
+                    _ = xml.Value;
+                }
+                else if (xml.NodeType == XmlNodeType.Element && xml.HasAttributes)
+                {
+                    while (xml.MoveToNextAttribute())
                     {
                         _ = xml.Value;
                     }
-                    else if (xml.NodeType == XmlNodeType.Element && xml.HasAttributes)
-                    {
-                        while (xml.MoveToNextAttribute())
-                        {
-                            _ = xml.Value;
-                        }
 
-                        xml.MoveToElement();
-                    }
+                    xml.MoveToElement();
                 }
             }
-            catch { }
         });
     }
 }

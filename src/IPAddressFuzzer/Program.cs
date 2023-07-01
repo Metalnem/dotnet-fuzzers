@@ -8,14 +8,10 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Fuzzer.LibFuzzer.Run(span =>
+        Fuzzer.LibFuzzer.RunAndIgnoreExceptions(span =>
         {
-            try
-            {
-                var s = Encoding.UTF8.GetString(span);
-                IPAddress.Parse(s);
-            }
-            catch { }
+            var s = Encoding.UTF8.GetString(span);
+            IPAddress.Parse(s);
         });
     }
 }

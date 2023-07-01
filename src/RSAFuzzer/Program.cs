@@ -7,14 +7,10 @@ public class Program
 {
     public static void Main()
     {
-        Fuzzer.LibFuzzer.Run(span =>
+        Fuzzer.LibFuzzer.RunAndIgnoreExceptions(span =>
         {
-            try
-            {
-                using var rsa = RSA.Create();
-                rsa.ImportRSAPrivateKey(span, out _);
-            }
-            catch { }
+            using var rsa = RSA.Create();
+            rsa.ImportRSAPrivateKey(span, out _);
         });
     }
 }
