@@ -6,7 +6,7 @@ namespace XmlReaderFuzzer;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static void Main()
     {
         Fuzzer.LibFuzzer.Run(span =>
         {
