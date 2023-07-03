@@ -12,6 +12,7 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
 
 - [System.IO.Compression.ZipArchive](https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.ziparchive)
 - [System.Net.IPAddress](https://learn.microsoft.com/en-us/dotnet/api/system.net.ipaddress)
+- [System.Numerics.BigInteger](https://learn.microsoft.com/en-us/dotnet/api/system.numerics.biginteger)
 - [System.Security.Cryptography.RSA](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.rsa)
 - [System.Text.Json.JsonSerializer](https://learn.microsoft.com/en-us/dotnet/api/system.text.json.jsonserializer)
 - [System.Uri](https://learn.microsoft.com/en-us/dotnet/api/system.uri)
