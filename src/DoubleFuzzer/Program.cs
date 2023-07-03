@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Text;
 using SharpFuzz;
 
@@ -12,7 +13,7 @@ public class Program
         {
             string s1 = Encoding.UTF8.GetString(span);
 
-            if (!double.TryParse(s1, out var d1) || double.IsNaN(d1))
+            if (!double.TryParse(s1, NumberStyles.Any, null, out var d1) || double.IsNaN(d1))
             {
                 return;
             }
