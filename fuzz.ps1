@@ -5,6 +5,7 @@ param (
     [string]$corpus,
     [Parameter(Mandatory = $true)]
     [string[]]$targetDlls,
+    [string]$namespaces = $null,
     [string]$dict = $null,
     [int]$timeout = 10
 )
@@ -33,7 +34,13 @@ $env:SHARPFUZZ_INSTRUMENT_MIXED_MODE_ASSEMBLIES = 1
 foreach ($targetDll in $targetDlls) {
     $fuzzingTarget = Join-Path $outputDir $targetDll
     Write-Output "Instrumenting $fuzzingTarget"
-    sharpfuzz $fuzzingTarget
+
+    if ($namespaces) {
+        sharpfuzz $fuzzingTarget $namespaces
+    }
+    else {
+        sharpfuzz $fuzzingTarget
+    }
 
     if ($LastExitCode -ne 0) {
         Write-Error "An error occurred while instrumenting $fuzzingTarget"
