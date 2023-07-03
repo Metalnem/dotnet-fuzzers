@@ -10,6 +10,7 @@
 
 SharpFuzz fuzzing projects for the following .NET Core classes:
 
+- [System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double)
 - [System.IO.Compression.ZipArchive](https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.ziparchive)
 - [System.Net.IPAddress](https://learn.microsoft.com/en-us/dotnet/api/system.net.ipaddress)
 - [System.Numerics.BigInteger](https://learn.microsoft.com/en-us/dotnet/api/system.numerics.biginteger)
