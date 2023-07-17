@@ -10,7 +10,7 @@
 
 SharpFuzz fuzzing projects for the following .NET Core classes:
 
-### [System.DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime)
+#### [System.DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime)
 
 ```powershell
 .\fuzz.ps1 `
@@ -20,7 +20,7 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
   -namespaces "System.DateTime,System.Globalization.DateTime"
 ```
 
-### [System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double)
+#### [System.Double](https://learn.microsoft.com/en-us/dotnet/api/system.double)
 
 ```powershell
 .\fuzz.ps1 `
@@ -30,7 +30,7 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
   -namespaces "System.Number"
 ```
 
-### [System.IO.Compression.ZipArchive](https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.ziparchive)
+#### [System.IO.Compression.ZipArchive](https://learn.microsoft.com/en-us/dotnet/api/system.io.compression.ziparchive)
 
 ```powershell
 .\fuzz.ps1 `
@@ -39,7 +39,7 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
   -targetDlls System.IO.Compression.dll
 ```
 
-### [System.Net.IPAddress](https://learn.microsoft.com/en-us/dotnet/api/system.net.ipaddress)
+#### [System.Net.IPAddress](https://learn.microsoft.com/en-us/dotnet/api/system.net.ipaddress)
 
 ```powershell
 .\fuzz.ps1 `
@@ -48,7 +48,7 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
   -targetDlls System.Net.Primitives.dll
 ```
 
-### [System.Numerics.BigInteger](https://learn.microsoft.com/en-us/dotnet/api/system.numerics.biginteger)
+#### [System.Numerics.BigInteger](https://learn.microsoft.com/en-us/dotnet/api/system.numerics.biginteger)
 
 ```powershell
 .\fuzz.ps1 `
@@ -57,7 +57,7 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
   -targetDlls System.Runtime.Numerics.dll
 ```
 
-### [System.Security.Cryptography.RSA](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.rsa)
+#### [System.Security.Cryptography.RSA](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.rsa)
 
 ```powershell
 .\fuzz.ps1 `
@@ -66,7 +66,7 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
   -targetDlls System.Formats.Asn1.dll,System.Security.Cryptography.dll
 ```
 
-### [System.Text.Json.JsonSerializer](https://learn.microsoft.com/en-us/dotnet/api/system.text.json.jsonserializer)
+#### [System.Text.Json.JsonSerializer](https://learn.microsoft.com/en-us/dotnet/api/system.text.json.jsonserializer)
 
 ```powershell
 .\fuzz.ps1 `
@@ -76,7 +76,7 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
   -dict .\dictionaries\json.dict
 ```
 
-### [System.Uri](https://learn.microsoft.com/en-us/dotnet/api/system.uri)
+#### [System.Uri](https://learn.microsoft.com/en-us/dotnet/api/system.uri)
 
 ```powershell
 .\fuzz.ps1 `
@@ -85,7 +85,7 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
   -targetDlls System.Private.Uri.dll
 ```
 
-### [System.Xml.XmlReader](https://learn.microsoft.com/en-us/dotnet/api/system.xml.xmlreader)
+#### [System.Xml.XmlReader](https://learn.microsoft.com/en-us/dotnet/api/system.xml.xmlreader)
 
 ```powershell
 .\fuzz.ps1 `
