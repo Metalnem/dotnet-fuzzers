@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 using SharpFuzz;
 
@@ -9,6 +10,9 @@ public class Program
 {
     public static void Main()
     {
+        var formats = new string[] { "C", "E", "F", "G", "N", "P", "R" };
+        var digits = Enumerable.Range(0, 10);
+
         Fuzzer.LibFuzzer.Run(span =>
         {
             string s1 = Encoding.UTF8.GetString(span);
@@ -24,6 +28,18 @@ public class Program
             if (d1 != d2)
             {
                 throw new Exception();
+            }
+
+            foreach (var format in formats)
+            {
+                foreach (var digit in digits)
+                {
+                    try
+                    {
+                        d1.ToString($"{format}{digit}");
+                    }
+                    catch { }
+                }
             }
         });
     }
