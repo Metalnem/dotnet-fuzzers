@@ -76,6 +76,16 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
   -dict .\dictionaries\json.dict
 ```
 
+#### [System.Text.Unicode.Utf8](https://learn.microsoft.com/en-us/dotnet/api/system.text.unicode.utf8)
+
+```powershell
+.\fuzz.ps1 `
+  -project .\src\Utf8Fuzzer\Utf8Fuzzer.csproj `
+  -corpus .\src\Utf8Fuzzer\Testcases\ `
+  -targetDlls System.Private.CoreLib.dll `
+  -namespaces "System.Text.Unicode"
+```
+
 #### [System.Uri](https://learn.microsoft.com/en-us/dotnet/api/system.uri)
 
 ```powershell
