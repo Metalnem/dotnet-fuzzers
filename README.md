@@ -10,6 +10,16 @@
 
 SharpFuzz fuzzing projects for the following .NET Core classes:
 
+#### [System.Buffers.Text.Utf8Parser](https://learn.microsoft.com/en-us/dotnet/api/system.buffers.text.utf8parser)
+
+```powershell
+.\fuzz.ps1 `
+  -project .\src\Utf8ParserFuzzer\Utf8ParserFuzzer.csproj `
+  -corpus .\src\Utf8ParserFuzzer\Testcases\ `
+  -targetDlls System.Private.CoreLib.dll `
+  -namespaces "System.Buffers"
+```
+
 #### [System.DateTime](https://learn.microsoft.com/en-us/dotnet/api/system.datetime)
 
 ```powershell
