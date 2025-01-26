@@ -76,6 +76,15 @@ SharpFuzz fuzzing projects for the following .NET Core classes:
   -targetDlls System.Formats.Asn1.dll,System.Security.Cryptography.dll
 ```
 
+#### [System.Security.Cryptography.X509Certificates.X509CertificateLoader](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificateloader)
+
+```powershell
+.\fuzz.ps1 `
+  -project .\src\X509CertificateLoaderFuzzer\X509CertificateLoaderFuzzer.csproj `
+  -corpus .\src\X509CertificateLoaderFuzzer\Testcases\ `
+  -targetDlls System.Formats.Asn1.dll,System.Security.Cryptography.dll
+```
+
 #### [System.Text.Json.JsonSerializer](https://learn.microsoft.com/en-us/dotnet/api/system.text.json.jsonserializer)
 
 ```powershell
