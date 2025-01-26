@@ -4,6 +4,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageVersion Include="SharpFuzz" Version="2.1.1"/>
+    <PackageVersion Include="SharpFuzz" Version="2.2.0"/>
   </ItemGroup>
 </Project>
